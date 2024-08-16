@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/alertify.min.css"/>
+
+  <title>Post Add</title>
+</head>
+
+<body>
+  <!-- Navbar start -->
+  <div class="navbar bg-primary">
+    <div class="flex-1 px-2 lg:flex-none">
+      <a href="./index.html" class="text-lg font-bold text-white">Buy / Sells Corner</a>
+    </div>
+    <div class="flex flex-1 justify-end px-2">
+      <div id="nav_option_show" class="flex items-stretch">
+        <!-- btn came from js file -->
+      </div>
+    </div>
+  </div>
+  <!-- Navbar end -->
+
+  <!-- Form start -->
+  <div class="flex justify-center mt-10">
+    <div class="card w-full max-w-md shadow-2xl bg-base-100">
+      <div class="card-body">
+        <h2 class="card-title">Add Your Blog</h2>
+
+     
+
+        <!-- Product Title -->
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Blog Title</span>
+          </label>
+          <input id="product-title" type="text" placeholder="Enter Product Title" class="input input-bordered w-full" />
+        </div>
+
+        <!-- Product Description -->
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Blog Description</span>
+          </label>
+          <textarea id="product-description" placeholder="Enter Product Description" class="textarea textarea-bordered w-full"></textarea>
+        </div>
+
+        <!-- Post Now Button -->
+        <div class="form-control mt-6">
+          <button id="Post_Now_btn" class="btn btn-primary">
+            <span id="Post_Now_text">Post Now</span>
+            <span id="loading-spinner" class="loading loading-bars loading-lg hidden"></span>
+       
+          </button>
+          <span id="loading-spinner" class="loading loading-bars loading-lg hidden"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Form end -->
+  <header class="mt-10 mb-8 text-center">
+    <h1 class="text-4xl font-extrabold text-gray-900">My Blog</h1>
+    <p class="mt-2 text-lg text-gray-600">My latest posts and updates</p>
+  </header>
+  <div id="user_blogs_dt" class="container mx-auto px-4 py-8">
+    <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <div class="p-4">
+          <h2 class="text-xl font-bold mb-2">Blog Title 1</h2>
+          <p class="text-gray-500 mb-2">Monday, August 12</p>
+          <p class="text-gray-700 mb-4">This is a brief description of the blog post. It provides a quick overview of what the post is about.</p>
+          <div class="flex space-x-4">
+            <button class="btn btn-primary">Edit</button>
+            <button class="btn btn-secondary">Delete</button>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</body>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/alertify.min.js"></script>
+<script type="module" src="./script/addPost.js"></script>
+
+</html>
